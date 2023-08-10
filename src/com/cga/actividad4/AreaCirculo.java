@@ -20,6 +20,7 @@ public class AreaCirculo {
 	public static void main(String[] args) {
 		// Declaración variables
 		
+		
 		double area;
 		float radio;
 		final double PI = 3.1416;
