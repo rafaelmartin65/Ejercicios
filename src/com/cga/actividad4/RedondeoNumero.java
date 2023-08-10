@@ -19,8 +19,6 @@ public class RedondeoNumero {
 	public static void main(String[] args) {
 		//definir variables
 		double numero;
-		int entero;
-		
 		Scanner sc = new Scanner(System.in);
 		
 		// Pedir valores por teclado
