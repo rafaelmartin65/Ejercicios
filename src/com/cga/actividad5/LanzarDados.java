@@ -75,7 +75,7 @@ public class LanzarDados {
 		
 		// Cáculo media total
 		
-		media = (media1 + media2)/2;
+		media = Math.round((media1 + media2)/2);
 		
 		
 		
@@ -89,7 +89,7 @@ public class LanzarDados {
 			System.out.println("\nEl Segundo jugador ha hecho la mayor tirada");
 		}
 
-		System.out.println("La media total es:" + media);
+		System.out.printf("La media total es: %.0f%n", media);
 	}
 
 }
