@@ -18,51 +18,86 @@ public class LanzarDados {
 	public static void main(String[] args) {
 		// Definir variables
 		double aleatorio, media1, media2, media;
-		int dado1, dado2, resultado1, resultado2;
+		int dado1, dado2, resultado1, resultado2, aleatorioInt;
 		
-		// Lanza el dado el juegador 1
-		aleatorio = Math.random();
-		dado1 = (int) (aleatorio * 10);
+		// Lanza el dado 1 el juegador 1
+		aleatorio = Math.random()*10;
+		aleatorioInt = (int) aleatorio;
 		
-		if (dado1 > 6 ) {
-			dado1 -= 3;
+		
+		
+		// comprueba rango numero del dado
+		if (aleatorioInt > 6 ) {
+			aleatorioInt -= 3;
+		}else if (aleatorioInt == 0){
+			aleatorioInt ++;
+			
 		}
 		
+		// Asignar valor al dado 1
+		dado1 = aleatorioInt;
 		
-		aleatorio = Math.random();
-		dado2 = (int) (aleatorio * 10);
 		
-		if (dado2 > 6 ) {
-			dado2 -= 3;
+		
+		// Lanza el dado 2 el juegador 1
+		aleatorio = Math.random()*10;
+		aleatorioInt = (int) aleatorio;
+		
+		
+		
+		// comprueba rango numero del dado
+		if (aleatorioInt > 6 ) {
+			aleatorioInt -= 3;
+		}else if (aleatorioInt == 0){
+			aleatorioInt ++;
+			
 		}
+		
+		// Asignar valor al dado 2
+		dado2 = aleatorioInt;
+		
 		System.out.println("El Primer jugador hace su lanzamiento \n");
 		System.out.println("Dado 1: " + dado1);
 		System.out.println("Dado 2: " + dado2);
 		
 		resultado1 = dado1 + dado2;
 		
-		// Cáculo media Segundo jugador
+		// Cáculo media Primer jugador
 		media1 = resultado1/2;
 		
-	
 		
 		System.out.println("Resultado del primer jugador es: " + resultado1);
 		
-		// Lanza el dado el juegador 2
-		aleatorio = Math.random();
-		dado1 = (int) (aleatorio * 10);
+		// Lanza el dado 1 el juegador 2
+		aleatorio = Math.random()*10;
+		aleatorioInt = (int) aleatorio;
 		
-		if (dado1 > 6 ) {
-			dado1 -= 3;
+		// comprueba rango numero del dado
+		if (aleatorioInt > 6 ) {
+			aleatorioInt -= 3;
+		}else if (aleatorioInt == 0){
+			aleatorioInt ++;
+			
 		}
 		
+		// Asignar valor al dado 1
+		dado1 = aleatorioInt;
 		
-		aleatorio = Math.random();
-		dado2 = (int) (aleatorio * 10);
+		// Lanza el dado 2 el juegador 2
+		aleatorio = Math.random()*10;
+		aleatorioInt = (int) aleatorio;
 		
-		if (dado2 > 6 ) {
-			dado2 -= 3;
+		// comprueba rango numero del dado
+		if (aleatorioInt > 6 ) {
+			aleatorioInt -= 3;
+		}else if (aleatorioInt == 0){
+			aleatorioInt ++;
+			
 		}
+		
+		// Asignar valor al dado 1
+		dado2 = aleatorioInt;
+		
 		System.out.println("\nEl Segundo jugador hace su lanzamiento \n");
 		System.out.println("Dado 1: " + dado1);
 		System.out.println("Dado 2: " + dado2);
