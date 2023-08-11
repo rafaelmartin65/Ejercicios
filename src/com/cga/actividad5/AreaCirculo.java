@@ -1,15 +1,17 @@
 /**
  * 
  */
-package com.cga.actividad4;
+package com.cga.actividad5;
+
 
 import java.util.Scanner;
 
 /**
- * @author Rafael Martin
+ *@author Rafael Martin
  * 
- *  Actividad número #4 -> ejercicio 5: programa que pida el radio de un círculo y calcule
+ *  Actividad número #5 -> ejercicio 2: programa que pida el radio de un círculo y calcule
  * su área mediante la siguiente fórmula:
+ *
  *
  */
 public class AreaCirculo {
@@ -18,15 +20,13 @@ public class AreaCirculo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Declaración variables
-		
-		
 		double area;
 		float radio;
-		final double PI = 3.1416;
+		// final double PI = 3.1416;
 		
 
 		Scanner sc = new Scanner(System.in);
+		
 		
 		// Pedir valores por teclado
 		
@@ -34,8 +34,8 @@ public class AreaCirculo {
 		radio = sc.nextFloat();
 		
 		
-		// cálculo del area
-		area = PI * (radio * radio);
+		// cálculo del area. Usar clase Math metodo PI
+		area = Math.PI * (Math.pow(radio, 2));
 		
 		
 		System.out.println("El área del círculo es: " + area);
@@ -43,8 +43,6 @@ public class AreaCirculo {
 		
 		
 		sc.close();
-	
-
 	}
 
 }
