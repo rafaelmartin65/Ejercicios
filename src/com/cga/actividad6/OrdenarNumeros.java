@@ -22,18 +22,19 @@ public class OrdenarNumeros {
 		int x, temp;
 		int numero;
 		
-		Scanner sc = new Scanner(System.in);
-		
-		// Cargara los numero en un array
-		for (x = 0 ; x < 3 ; x++) {
+		try (Scanner sc = new Scanner(System.in)) {
+			// Cargara los numero en un array
+			for (x = 0 ; x < 3 ; x++) {
+				
+				System.out.println("introducir un numero");
+				numero = sc.nextInt();
+				numeros[x] = numero;	
+				
+			}
 			
-			System.out.println("introducir un numero");
-			numero = sc.nextInt();
-			numeros[x] = numero;	
-			
+			sc.close();
 		}
 		
-		sc.close();
 		for (x = 0 ; x < 3 ; ++x) {
 			
 			System.out.print("   " + numeros[x]);
