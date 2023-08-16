@@ -3,6 +3,7 @@
  */
 package com.cga.actividad6;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -19,7 +20,8 @@ public class AdivinarNumero {
 	public static void main(String[] args) {
 		//Declarar variables
 		
-		int aleatorio, numIntro, intentos = 0;
+		boolean verdadero = true;
+		int aleatorio, numIntro = 0, intentos = 0;
 		
 		
 		Scanner sc = new Scanner(System.in);
@@ -30,30 +32,39 @@ public class AdivinarNumero {
 		
 		
 		// Pedir el numero por pantalla
-		System.out.println("introducir un número entre 1 y 100: ");
 		
-		numIntro = sc.nextInt();
-		intentos++;
+		try {
+			System.out.println("introducir un número entre 1 y 100: ");
 		
-		// comprobar si el número introducido es mayor o menor que el número secreto
-		while (numIntro != aleatorio) {
-			if (numIntro < aleatorio) {
-				System.out.println("el número generado es mayor que: " + numIntro);
-				numIntro = sc.nextInt();
-				intentos++;
-			}else if (numIntro > aleatorio){
-				System.out.println("el número generado es menor que: " + numIntro);
-				numIntro = sc.nextInt();
-				intentos++;
-			}
+			numIntro = sc.nextInt();
+				
+					
+				
+		
+			intentos++;
 			
-		}
-
-		
-		// Mostrar por pantalla que ha acertado el número secreto e indicar cuantos intentos se hicieron
-		System.out.println("Felicidades ha adivinado el número secreto!");
-		System.out.println("El número de intentos para adivinar el número secreto ha sido de: " + intentos);
+			// comprobar si el número introducido es mayor o menor que el número secreto
+			while (numIntro != aleatorio) {
+				if (numIntro < aleatorio) {
+					System.out.println("el número generado es mayor que: " + numIntro);
+					numIntro = sc.nextInt();
+					intentos++;
+				}else if (numIntro > aleatorio){
+					System.out.println("el número generado es menor que: " + numIntro);
+					numIntro = sc.nextInt();
+					intentos++;
+				}
+				
+			}
 	
+			
+			// Mostrar por pantalla que ha acertado el número secreto e indicar cuantos intentos se hicieron
+			System.out.println("Felicidades ha adivinado el número secreto!");
+			System.out.println("El número de intentos para adivinar el número secreto ha sido de: " + intentos);
+			}
+		catch (InputMismatchException e){
+			System.err.println("Error mismatch exception " + e.getMessage());
+		}
 		sc.close();
 		
 	}
