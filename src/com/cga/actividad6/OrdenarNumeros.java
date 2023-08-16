@@ -3,7 +3,6 @@
  */
 package com.cga.actividad6;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -19,41 +18,51 @@ public class OrdenarNumeros {
 	 */
 	public static void main(String[] args) {
 		int[] numeros = new int[3];
-		int x, temp;
-		int numero;
+		
+		int i, j, n, temp;
+		
+		
+		
 		
 		try (Scanner sc = new Scanner(System.in)) {
-			// Cargara los numero en un array
-			for (x = 0 ; x < 3 ; x++) {
-				
-				System.out.println("introducir un numero");
-				numero = sc.nextInt();
-				numeros[x] = numero;	
+			for (i = 0; i < numeros.length; i++) {
+				System.out.println("Ingresa el número " + (i + 1) + ": ");
+				numeros[i] = sc.nextInt();
+			}
+			
+			
+			n = numeros.length;
+			
+			// Recorrer el array comprobar y ordenar de mayor a menor
+			for (i = 0; i < n - 1; i++ ) {
+				for (j = 0; j < n -i -1; j++) {
+					if (numeros[j] < numeros[j + 1]) {
+						// intercambiar elementos
+						temp = numeros[j];
+						numeros[j] = numeros [j + 1];
+						numeros[j + 1] = temp;
+					}
+				}
 				
 			}
 			
 			sc.close();
 		}
 		
-		for (x = 0 ; x < 3 ; ++x) {
+		System.out.println("Números ordenados de mayor a menor: ");
 			
-			System.out.print("   " + numeros[x]);
-			
-			if (x < 3) {
-				if (numeros[x] > numeros[x+1]) {
-					temp = numeros[x+1];
-					numeros[x+1] = numeros[x];
-					numeros[x] = temp;
-					
-				}
+			for (int numero : numeros) {
+				System.out.println(numero + " ");
 			}
+		
+		
+		
+		
 			
-		}
-		
-		
-		
-		
-
 	}
+		
+			
 
 }
+
+
