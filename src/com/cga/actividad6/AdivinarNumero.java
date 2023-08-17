@@ -37,10 +37,7 @@ public class AdivinarNumero {
 			System.out.println("introducir un número entre 1 y 100: ");
 		
 			numIntro = sc.nextInt();
-				
-					
-				
-		
+			
 			intentos++;
 			
 			// comprobar si el número introducido es mayor o menor que el número secreto
@@ -56,15 +53,20 @@ public class AdivinarNumero {
 				}
 				
 			}
-	
-			
-			// Mostrar por pantalla que ha acertado el número secreto e indicar cuantos intentos se hicieron
-			System.out.println("Felicidades ha adivinado el número secreto!");
-			System.out.println("El número de intentos para adivinar el número secreto ha sido de: " + intentos);
-			}
+				
+		}
+		
 		catch (InputMismatchException e){
 			System.err.println("Error mismatch exception " + e.getMessage());
 		}
+				
+		
+			
+		// Mostrar por pantalla que ha acertado el número secreto e indicar cuantos intentos se hicieron
+		System.out.println("Felicidades ha adivinado el número secreto!");
+		System.out.println("El número de intentos para adivinar el número secreto ha sido de: " + intentos);
+		
+		
 		sc.close();
 		
 	}
