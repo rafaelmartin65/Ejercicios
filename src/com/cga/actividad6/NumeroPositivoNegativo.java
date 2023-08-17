@@ -21,6 +21,7 @@ public class NumeroPositivoNegativo {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("*** Si desae terminar debe introducir 0 ***");
 		do {
 			System.out.println("Ingresar un número entero: ");
 			numero = sc.nextInt();
