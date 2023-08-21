@@ -222,7 +222,7 @@ public class Function {
 					System.out.println("El mayor de los tres es el número 3: " + num3);
 				}
 				
-				System.out.println("despues del if");
+				
 			}
 			
 			
