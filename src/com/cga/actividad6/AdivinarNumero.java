@@ -20,7 +20,7 @@ public class AdivinarNumero {
 	public static void main(String[] args) {
 		//Declarar variables
 		
-		boolean verdadero = true;
+		
 		int aleatorio, numIntro = 0, intentos = 0;
 		
 		
@@ -33,42 +33,54 @@ public class AdivinarNumero {
 		
 		// Pedir el numero por pantalla
 		
-		try {
-			System.out.println("introducir un número entre 1 y 100: ");
-		
-			numIntro = sc.nextInt();
-			
-			intentos++;
 			
 			// comprobar si el número introducido es mayor o menor que el número secreto
-			while (numIntro != aleatorio) {
-				if (numIntro < aleatorio) {
-					System.out.println("el número generado es mayor que: " + numIntro);
-					numIntro = sc.nextInt();
-					intentos++;
-				}else if (numIntro > aleatorio){
-					System.out.println("el número generado es menor que: " + numIntro);
-					numIntro = sc.nextInt();
-					intentos++;
+		System.out.println("introducir un número entre 1 y 100: ");
+		System.out.println("aleatorio: " + aleatorio);
+		while (true){
+			
+			try {
+				System.out.println("introducir un número: ");
+				
+				numIntro = sc.nextInt();
+				
+				intentos++;
+				
+				if (numIntro < 1 || numIntro > 100 ) {
+					System.out.println("el número debe estar entre 1 y 100");
+					
+				}else if(numIntro == aleatorio){
+					System.out.println("adivinaste el numero en " + intentos +" intentos" );
+					break;
+				}else{
+					System.out.println("no adivinaste sigue intentando");
+					if(numIntro > aleatorio) {
+						System.out.println("El número ingresado es mayor");
+					}else{
+						System.out.println("El número ingresado es menor");
+					}
 				}
 				
+				
 			}
-				
-		}
-		
-		catch (InputMismatchException e){
-			System.err.println("Error mismatch exception " + e.getMessage());
-		}
-				
-		
 			
-		// Mostrar por pantalla que ha acertado el número secreto e indicar cuantos intentos se hicieron
-		System.out.println("Felicidades ha adivinado el número secreto!");
-		System.out.println("El número de intentos para adivinar el número secreto ha sido de: " + intentos);
+			
+			catch (InputMismatchException e){
+				System.out.println("debes ingresar un numero válido InputMismatchException " + e.getMessage());
+				sc.next();
+			}
+			
+			catch (NumberFormatException ex){
+				System.out.println("debe introducir un número entre 1 y 100 NumberFormatException " + ex.getMessage());
+				sc.next();
+			}
+			
 		
+		}
 		
 		sc.close();
-		
+		System.out.println("fin del programa!");
 	}
+	
 
 }
