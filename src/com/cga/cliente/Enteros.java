@@ -28,13 +28,24 @@ public class Enteros {
 		// TODO Auto-generated method stub
 		System.out.println("Introduce un numero entero");
 		int entero = sc.nextInt();
+		int suma = 0, cont = 0;
+		Enteros aux = new Enteros();
 		
 		while (entero != 0) {
 			
-			int suma =+ entero;
-			int cont =+ 1 ;
+			aux.
+			suma = suma + entero;
+			cont = cont + 1 ;
+			System.out.println("Introduce un numero entero");
+			entero = sc.nextInt();
 			
 		}
+		
+		double media = suma / cont;
+		System.out.println("Esta es la media: " + media);
+		System.out.println("Esta es la suma: " + suma);
+		System.out.println("Estos son los números: " + enteros.toString());
+		
 	}
 	
 	
