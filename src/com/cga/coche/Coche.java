@@ -26,17 +26,39 @@ public class Coche {
 	public static void main(String[] args) {
 		LeerCoches();
 		System.out.println("\nCoches introducidos: ");
-		mostrarCoches();
-		mostrarPorMarca();
-		mostrarPorKm();
-		System.out.println("\nCoches con mayor número de km: ");
-		mostrarMayorKm();
+//		mostrarCoches();
+//		mostrarPorMarca();
+//		mostrarPorKm();
+//		System.out.println("\nCoches con mayor número de km: ");
+//		mostrarMayorKm();
 		System.out.println("\nCoches ordenados de menor a mayor número de km: ");
 		mostrarOrdenadosPorKm();
+		System.out.println("\nIntroduce matricula a eliminar: ");
+		eliminarCoche();
 		
 	}// Fin metodo main
 	
 	
+	private static void eliminarCoche() {
+		//Declara variable
+		String matricula;
+		System.out.print("Introduce matricula: ");
+		matricula = sc.nextLine();
+		
+		//System.out.println("Coches de la matricula " + matricula);
+		
+		for (int i = 0;i < coches.size(); i++) {
+			if (coches.get(i).getMatricula().equalsIgnoreCase(matricula)) {
+				//System.out.println(coches.get(i));
+				coches.remove(i);
+				System.out.println("matricula eliminada: " + matricula);
+			}
+		}
+		System.out.println("Mostrar coches despues de eliminar, el: " + matricula );
+		mostrarCoches();
+	}
+
+
 	private static void mostrarOrdenadosPorKm() {
 		// Declara variables
 		int i, j;
@@ -114,7 +136,7 @@ public class Coche {
 		String modelo;
 		int Km;
 		
-		//Variable auxiliar que contendrá la rferencia a cada coche nuevo
+		//Variable auxiliar que contendrá la referencia a cada coche nuevo
 		Coche aux;
 		int i, N;
 		// Se pide por teclado elnúmero de coches a leer
