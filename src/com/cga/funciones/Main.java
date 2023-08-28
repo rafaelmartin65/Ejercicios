@@ -73,8 +73,24 @@ public class Main {
 		Function mayor3 = new Function();
 		mayor3.mayorDosNumeros(1, 7, 8);
 		
+		// Funcion 11
+		Function potencia = new Function();
+		int calcularPotencia = potencia.calcularPotencia(5, 2);
+		System.out.println("Calcular potencia:  " + calcularPotencia);
 		
-	}
+		//Funcion 12
+		Function mcd = new Function();
+		int mcdResult = mcd.calcularMCD(48, 18);
+		System.out.println("El máximo común divisor de 48 y 18 es:" + mcdResult );
+		
+		//Function 13
+		
+		Function fb = new Function();
+		int enesimo = fb.calcularFibonacci(6);
+		System.out.println("El enesimo termino de la serie fibonacci donde n = 6, es: " + enesimo);
+		
+		
+	}// end main
 	
 	
 	

@@ -229,8 +229,38 @@ public class Function {
 			
 			
 		}
+		
+		// Calcular a elevado a la n, donde n es un entereo positivo
+		
+		public int calcularPotencia(int base, int n) {
+			
+			if (n == 0) {
+				return 1;
+			}
+			return base * calcularPotencia(base, n -1);
+			
+		}
+		
+		
+		// Calcular maximo comun divisor de dos numeros
+		
+		public int calcularMCD(int a, int b) {
+			
+			
+			if (b == 0) {
+				return a;
+			}
+			return calcularMCD(b, a % b);
+		}
 	
 
 	
+		// Calcular enesimo termino de la serie de fibonacci
+		public int calcularFibonacci(int n) {
+			if (n <= 1) {
+				return n;
+			}
+			return calcularFibonacci(n - 1) + calcularFibonacci(n - 2);
+		}
 	
 }
