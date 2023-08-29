@@ -26,11 +26,11 @@ public class Coche {
 	public static void main(String[] args) {
 		LeerCoches();
 		System.out.println("\nCoches introducidos: ");
-//		mostrarCoches();
-//		mostrarPorMarca();
-//		mostrarPorKm();
-//		System.out.println("\nCoches con mayor número de km: ");
-//		mostrarMayorKm();
+		mostrarCoches();
+		mostrarPorMarca();
+		mostrarPorKm();
+		System.out.println("\nCoches con mayor número de km: ");
+		mostrarMayorKm();
 		System.out.println("\nCoches ordenados de menor a mayor número de km: ");
 		mostrarOrdenadosPorKm();
 		System.out.println("\nIntroduce matricula a eliminar: ");

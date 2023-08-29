@@ -81,7 +81,7 @@ public class Main {
 		//Funcion 12
 		Function mcd = new Function();
 		int mcdResult = mcd.calcularMCD(48, 18);
-		System.out.println("El máximo común divisor de 48 y 18 es:" + mcdResult );
+		System.out.println("El máximo común divisor de 48 y 18 es: " + mcdResult );
 		
 		//Function 13
 		

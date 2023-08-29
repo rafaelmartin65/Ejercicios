@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * @author Alumno
+ * @author Rafael Martín
+ * Introducir numeros enteros hasta que se ingrese un 0. Mostrar la suma, la media y los números introducidos.
  *
  */
 public class Enteros {
@@ -16,37 +17,59 @@ public class Enteros {
 	 * @param args
 	 */
 	
-	static ArrayList<Enteros> enteros = new ArrayList<Enteros>();
+	
+	
+
+	static ArrayList<Integer> enteros = new ArrayList<Integer>();
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Ejecutar procedimientos
 		leerNumerosEnteros ();
+		mostrarResultados();
+	}
+	
+	private static void mostrarResultados() {
+		int suma = 0;
+		
+		//Mostrar números introducidos
+		System.out.println("Números introducidos: ");
+		for (int num : enteros) {
+			System.out.println(num +" ");
+			suma += num;
+		}
+		
+		double media = (double) suma / enteros.size();
+		
+		System.out.println("\nSuma: " + suma);
+		System.out.println("Media: " + media);
 	}
 
 	private static void leerNumerosEnteros() {
-		// TODO Auto-generated method stub
-		System.out.println("Introduce un numero entero");
-		int entero = sc.nextInt();
-		int suma = 0, cont = 0;
-		Enteros aux = new Enteros();
+		// Decalara variable y bucle para leer números desde teclado
 		
-		while (entero != 0) {
+		int num;
+		do {
+			System.out.println("Introduce un numero entero ( 0 para salir): ");
+			num = sc.nextInt();
+			enteros.add(num);
 			
-			aux.
-			suma = suma + entero;
-			cont = cont + 1 ;
-			System.out.println("Introduce un numero entero");
-			entero = sc.nextInt();
 			
-		}
+		} while (num != 0);
 		
-		double media = suma / cont;
-		System.out.println("Esta es la media: " + media);
-		System.out.println("Esta es la suma: " + suma);
-		System.out.println("Estos son los números: " + enteros.toString());
+		enteros.remove(enteros.size() - 1);
 		
 	}
+
+	
+	
+	
+	
+	
+
+	
+
+	
 	
 	
 	
