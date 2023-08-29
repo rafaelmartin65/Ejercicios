@@ -22,7 +22,7 @@ public class Coche {
 	static ArrayList<Coche> coches = new ArrayList<Coche>();
 	static Scanner sc = new Scanner(System.in);
 	
-	
+	// comentario
 	public static void main(String[] args) {
 		LeerCoches();
 		System.out.println("\nCoches introducidos: ");
@@ -120,7 +120,7 @@ public class Coche {
 	}
 
 
-	private static void mostrarCoches() {
+	public static void mostrarCoches() {
 		for (int i = 0; i < coches.size(); i++) {
 			System.out.println(coches.get(i));
 		}
