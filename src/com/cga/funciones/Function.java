@@ -255,7 +255,7 @@ public class Function {
 	
 
 	
-		// Calcular enesimo termino de la serie de fibonacci
+		// Calcular enésimo termino de la serie de fibonacci
 		public int calcularFibonacci(int n) {
 			if (n <= 1) {
 				return n;
