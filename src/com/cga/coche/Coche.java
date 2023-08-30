@@ -22,24 +22,24 @@ public class Coche {
 	static ArrayList<Coche> coches = new ArrayList<Coche>();
 	static Scanner sc = new Scanner(System.in);
 	
-	
-	public static void main(String[] args) {
-		LeerCoches();
-		System.out.println("\nCoches introducidos: ");
+	// comentario
+//	public static void main(String[] args) {
+//		LeerCoches();
+//		System.out.println("\nCoches introducidos: ");
 //		mostrarCoches();
 //		mostrarPorMarca();
 //		mostrarPorKm();
 //		System.out.println("\nCoches con mayor número de km: ");
 //		mostrarMayorKm();
-		System.out.println("\nCoches ordenados de menor a mayor número de km: ");
-		mostrarOrdenadosPorKm();
-		System.out.println("\nIntroduce matricula a eliminar: ");
-		eliminarCoche();
-		
-	}// Fin metodo main
+//		System.out.println("\nCoches ordenados de menor a mayor número de km: ");
+//		mostrarOrdenadosPorKm();
+//		System.out.println("\nIntroduce matricula a eliminar: ");
+//		eliminarCoche();
+//		
+//	}// Fin metodo main
 	
 	
-	private static void eliminarCoche() {
+	public static void eliminarCoche() {
 		//Declara variable
 		String matricula;
 		System.out.print("Introduce matricula: ");
@@ -59,7 +59,7 @@ public class Coche {
 	}
 
 
-	private static void mostrarOrdenadosPorKm() {
+	public static void mostrarOrdenadosPorKm() {
 		// Declara variables
 		int i, j;
 		Coche aux;
@@ -77,7 +77,7 @@ public class Coche {
 	}// fin mostrar coches
 
 
-	private static Coche mostrarMayorKm() {
+	public static Coche mostrarMayorKm() {
 		// declarar objeto
 		
 		Coche mayor = coches.get(0);
@@ -92,7 +92,7 @@ public class Coche {
 	}
 
 
-	private static void mostrarPorKm() {
+	public static void mostrarPorKm() {
 		//declara variables
 		int Km;
 		System.out.print("Introduce numero de kilómetros: ");
@@ -106,7 +106,7 @@ public class Coche {
 	}// fin metodo mostrarPorKm
 
 
-	private static void mostrarPorMarca() {
+	public static void mostrarPorMarca() {
 		String marca;
 		System.out.print("Introduce marca: ");
 		marca = sc.nextLine();
@@ -120,7 +120,7 @@ public class Coche {
 	}
 
 
-	private static void mostrarCoches() {
+	public static void mostrarCoches() {
 		for (int i = 0; i < coches.size(); i++) {
 			System.out.println(coches.get(i));
 		}
@@ -129,7 +129,7 @@ public class Coche {
 
 	
 	
-	private static void LeerCoches() {
+	public static void LeerCoches() {
 		// Declaracion de variables
 		String matricula;
 		String marca;

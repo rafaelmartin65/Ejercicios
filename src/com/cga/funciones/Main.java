@@ -6,7 +6,8 @@ package com.cga.funciones;
 import java.util.Scanner;
 
 /**
- * @author Alumno
+ * @author Rafael Martín
+ * Varias funciones
  *
  */
 public class Main {
@@ -14,6 +15,7 @@ public class Main {
 	/**
 	 * @param args
 	 */
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		// definir variables
 		
@@ -81,7 +83,7 @@ public class Main {
 		//Funcion 12
 		Function mcd = new Function();
 		int mcdResult = mcd.calcularMCD(48, 18);
-		System.out.println("El máximo común divisor de 48 y 18 es:" + mcdResult );
+		System.out.println("El máximo común divisor de 48 y 18 es: " + mcdResult );
 		
 		//Function 13
 		
