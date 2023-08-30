@@ -17,8 +17,9 @@ public class Matriz4X3 {
 	public static void main(String[] args) {
 		// declara la matriz
 		
-		String [][] matriz = new String[4][3];
 		Scanner sc = new Scanner(System.in);
+		String [][] matriz = new String[4][3];
+		
 		
 		
 		for (int i = 0; i < matriz.length; ++i) {
@@ -29,12 +30,13 @@ public class Matriz4X3 {
 			}
 		}
 		//Mostrar orden inverso del introducido
-		System.out.println("Mostrar en el orden inverso del introducido");
-		for (int i = matriz.length - 1; i  == 0 ; --i) {
-			for (int j = matriz[i].length - 1; j == 0 ; --j) {
-				System.out.printf(matriz[i][j]);
+		System.out.println("Mostrar el contenido en el orden inverso ");
+		for (int i = matriz.length - 1; i >= 0 ; i--) {
+			for (int j = matriz[i].length - 1; j >= 0 ; j--) {
+				System.out.printf(matriz[i][j] +" ");
 				
 			}
+			System.out.println();
 		}
 		
 	}
