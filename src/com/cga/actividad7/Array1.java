@@ -29,7 +29,7 @@ public class Array1 {
 			
 		}
 		//Muestra la suma del contenido del array
-		System.out.println("La suma de los valores es: " + suma);
+		System.out.println("\nLa suma de los valores es: " + suma);
 		
 		//Muestra el array completo
 		
